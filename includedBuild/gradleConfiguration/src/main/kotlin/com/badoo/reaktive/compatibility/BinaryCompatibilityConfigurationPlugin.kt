@@ -17,11 +17,11 @@ class BinaryCompatibilityConfigurationPlugin : Plugin<Project> {
                         "benchmarks",
                         "jmh",
                         "sample-mpp-module",
-                        "sample-android-app",
+                       // "sample-android-app",
                         "sample-js-browser-app",
                         "sample-linuxx64-app",
-                        "sample-ios-app",
-                        "sample-macos-app",
+                       // "sample-ios-app",
+                       // "sample-macos-app",
                         "check_publication".takeIf { target.hasProperty("check-publication") }
                     )
                 )
