@@ -39,11 +39,11 @@ kotlin {
             }
         }
 
-        androidMain {
-            dependencies {
-                implementation Deps.kotlinx.coroutines.android
-            }
-        }
+//        androidMain {
+//            dependencies {
+//                implementation Deps.kotlinx.coroutines.android
+//            }
+//        }
 
         nativeCommonMain {
             dependencies {
@@ -51,10 +51,10 @@ kotlin {
             }
         }
 
-        jsMain {
-            dependencies {
-                implementation Deps.kotlinx.coroutines.core.js
-            }
-        }
+//        jsMain {
+//           dependencies {
+//                implementation Deps.kotlinx.coroutines.core.js
+//            }
+//        }
     }
 }
