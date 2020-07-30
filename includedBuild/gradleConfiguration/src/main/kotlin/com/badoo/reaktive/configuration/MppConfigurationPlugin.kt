@@ -34,7 +34,7 @@ class MppConfigurationPlugin : Plugin<Project> {
 
     private fun setupAllTargetsWithDefaultSourceSets(project: Project) {
         if (Target.shouldDefineTarget(project, Target.ALL_LINUX_HOSTED)) {
-            setupAndroidTarget(project)
+//            setupAndroidTarget(project)
             setupJvmTarget(project)
             setupJsTarget(project)
             setupLinuxX64Target(project)
@@ -59,8 +59,8 @@ class MppConfigurationPlugin : Plugin<Project> {
                     maybeCreate("jvmMain").dependsOn(getByName("jvmCommonMain"))
                     maybeCreate("jvmTest").dependsOn(getByName("jvmCommonTest"))
 
-                    maybeCreate("androidMain").dependsOn(getByName("jvmCommonMain"))
-                    maybeCreate("androidTest").dependsOn(getByName("jvmCommonTest"))
+//                    maybeCreate("androidMain").dependsOn(getByName("jvmCommonMain"))
+//                    maybeCreate("androidTest").dependsOn(getByName("jvmCommonTest"))
 
                     maybeCreate("jsMain").dependsOn(getByName("jvmJsCommonMain"))
                     maybeCreate("jsTest").dependsOn(getByName("jvmJsCommonTest"))
