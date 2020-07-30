@@ -34,15 +34,15 @@ class MppConfigurationPlugin : Plugin<Project> {
 
     private fun setupAllTargetsWithDefaultSourceSets(project: Project) {
         if (Target.shouldDefineTarget(project, Target.ALL_LINUX_HOSTED)) {
-//            setupAndroidTarget(project)
+            setupAndroidTarget(project)
             setupJvmTarget(project)
-//            setupJsTarget(project)
+            setupJsTarget(project)
             setupLinuxX64Target(project)
 
             project.kotlin {
                 sourceSets {
-//                    maybeCreate("jvmJsCommonMain").dependsOn(getByName("commonMain"))
-//                    maybeCreate("jvmJsCommonTest").dependsOn(getByName("commonTest"))
+                    maybeCreate("jvmJsCommonMain").dependsOn(getByName("commonMain"))
+                    maybeCreate("jvmJsCommonTest").dependsOn(getByName("commonTest"))
 
                     maybeCreate("jvmNativeCommonMain").dependsOn(getByName("commonMain"))
                     maybeCreate("jvmNativeCommonTest").dependsOn(getByName("commonTest"))
@@ -59,11 +59,11 @@ class MppConfigurationPlugin : Plugin<Project> {
                     maybeCreate("jvmMain").dependsOn(getByName("jvmCommonMain"))
                     maybeCreate("jvmTest").dependsOn(getByName("jvmCommonTest"))
 
-//                    maybeCreate("androidMain").dependsOn(getByName("jvmCommonMain"))
-//                    maybeCreate("androidTest").dependsOn(getByName("jvmCommonTest"))
+                    maybeCreate("androidMain").dependsOn(getByName("jvmCommonMain"))
+                    maybeCreate("androidTest").dependsOn(getByName("jvmCommonTest"))
 
-//                    maybeCreate("jsMain").dependsOn(getByName("jvmJsCommonMain"))
-//                    maybeCreate("jsTest").dependsOn(getByName("jvmJsCommonTest"))
+                    maybeCreate("jsMain").dependsOn(getByName("jvmJsCommonMain"))
+                    maybeCreate("jsTest").dependsOn(getByName("jvmJsCommonTest"))
 
                     maybeCreate("nativeCommonMain").dependsOn(getByName("jvmNativeCommonMain"))
                     maybeCreate("nativeCommonTest").dependsOn(getByName("jvmNativeCommonTest"))
